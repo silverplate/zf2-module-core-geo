@@ -2,7 +2,7 @@
 
 namespace CoreGeo\CtrlController;
 
-use CoreControl\Controller\AbstractController;
+use Control\Controller\AbstractController;
 use CoreControl\Controller\SimpleFormTrait;
 use CoreControl\Controller\SortTrait;
 use CoreGeo\Form\Country as Form;
@@ -17,7 +17,7 @@ class CountriesController extends AbstractController
 
     protected function _getMapper()
     {
-        return $this->srv('\CoreGeo\Mapper\Country');
+        return $this->_srv('\CoreGeo\Mapper\Country');
     }
 
     protected function _createForm()

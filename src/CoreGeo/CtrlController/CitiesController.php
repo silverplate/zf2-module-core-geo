@@ -2,7 +2,7 @@
 
 namespace CoreGeo\CtrlController;
 
-use CoreControl\Controller\AbstractController;
+use Control\Controller\AbstractController;
 use CoreControl\Controller\SimpleFormTrait;
 use CoreControl\Controller\SortTrait;
 
@@ -16,12 +16,12 @@ class CitiesController extends AbstractController
 
     protected function _getMapper()
     {
-        return $this->srv('\CoreGeo\Mapper\City');
+        return $this->_srv('\CoreGeo\Mapper\City');
     }
 
     protected function _createForm()
     {
-        $form = $this->srv('\CoreGeo\Form\City');
+        $form = $this->_srv('\CoreGeo\Form\City');
         $form->bind($this->ent());
 
         return $form;
